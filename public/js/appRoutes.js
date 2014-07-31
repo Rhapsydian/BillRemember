@@ -5,19 +5,15 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		// home page
 		.when('/', {
 			templateUrl: 'views/home.html',
-			controller: 'MainController'
-		})
-
+			controller: 'HomeController'
+		}); //remove semi-colon from this line when you add more routes
+/*
 		.when('/nerds', {
 			templateUrl: 'views/nerd.html',
 			controller: 'NerdController'
 		})
+*/
 
-		.when('/geeks', {
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
-		});
-
-	$locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(false).hashPrefix('!');
 
 }]);
