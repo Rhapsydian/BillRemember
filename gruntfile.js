@@ -33,5 +33,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-develop');
 	
-	grunt.registerTask('default',['concat', 'develop']);
+	grunt.registerTask('default',['concat', 'develop', 'watch']);
 };
