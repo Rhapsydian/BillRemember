@@ -15,12 +15,23 @@ module.exports = function(grunt){
             scripts:{
                 files:['public/js/controllers/*.js','public/js/services/*.js'],
                 tasks:['concat']
+            },
+            application: {
+                files:['server.js','app/**/*.js'],
+                tasks:['develop'],
+                options: { nospawn: true }
+            }
+        },
+        develop:{
+            server:{
+                file: 'server.js'
             }
         }
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-develop');
 	
-	grunt.registerTask('default',['concat', 'watch']);
+	grunt.registerTask('default',['concat', 'develop']);
 };
