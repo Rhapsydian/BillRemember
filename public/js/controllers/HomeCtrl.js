@@ -1,6 +1,6 @@
 angular.module('HomeCtrl', []).controller('HomeController', function($scope) {
 
-	$scope.tagline = 'To the moon and back!';
+	$scope.tagline = 'Welcome to BillRemember!';
     //console.log("Hello Justin.");
 
 });
